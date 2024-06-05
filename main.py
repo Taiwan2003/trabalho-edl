@@ -1,6 +1,6 @@
 import pygame
 import sys
-from pytmx import load_pygame, TiledTileLayer
+import csv
 from settings import *
 
 # Inicializa o Pygame
@@ -13,6 +13,7 @@ pygame.display.set_caption("Roguelike")
 # Relógio para controlar a taxa de frames
 clock = pygame.time.Clock()
 
+# Criação do personagem
 class Personagem():
     def __init__(self, x, y, w, h, cor, forca, vida, velocidade):
         self.rect = pygame.Rect(x, y, w, h)
@@ -33,49 +34,26 @@ class Personagem():
             self.pulando = True
             self.vel_y = -15
         
-    def gravidade(self, platforms):
+    def gravidade(self):
         if self.pulando:
             self.vel_y += 1
             self.rect.y += self.vel_y
-            
-            # Detectar colisão com plataformas
-            collision_indices = self.rect.collidelistall(platforms)
-            if collision_indices:
-                for index in collision_indices:
-                    platform = platforms[index]
-                    if self.vel_y > 0:  # Caindo
-                        self.rect.bottom = platform.top
-                        self.pulando = False
-                        self.vel_y = 0
-
-    def update(self, platforms):
+            if self.rect.y == SCREEN_HEIGHT/2:
+                self.pulando = False
+    
+    def update(self):
         self.movimentar()
-        self.gravidade(platforms)
+        self.gravidade()
     
     def draw(self, screen):
         pygame.draw.rect(screen, self.cor, self.rect)
-    
-def load_map(filename):
-    return load_pygame(filename)
 
-def draw_map(tmx_data):
-    platforms = []
-    for layer in tmx_data.visible_layers:
-        if isinstance(layer, TiledTileLayer):
-            for x, y, gid in layer:
-                tile = tmx_data.get_tile_image_by_gid(gid)
-                if tile:
-                    screen.blit(tile, (x * tmx_data.tilewidth, y * tmx_data.tileheight))
-                    # Adiciona a plataforma à lista
-                    tile_rect = pygame.Rect(x * tmx_data.tilewidth, y * tmx_data.tileheight, tmx_data.tilewidth, tmx_data.tileheight)
-                    platforms.append(tile_rect)
-    return platforms
+
 
 def main():
-    tmx_data = load_map('assets/maps/4.tmx')
     running = True
     
-    personagem = Personagem(100, 100, 50, 50, (0, 0, 255), forca=10, vida=100, velocidade=5)
+    personagem = Personagem(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 50, 50, (0, 0, 255), forca=10, vida=100, velocidade=5)
 
     while running:
         for event in pygame.event.get():
@@ -84,12 +62,13 @@ def main():
 
         # Atualiza a tela
         screen.fill(BLACK)
-        platforms = draw_map(tmx_data)
+        
         
         # Atualiza e desenha o personagem
-        personagem.update(platforms)
+        personagem.update()
         personagem.draw(screen)
-
+        
+        pygame.draw.rect(screen, (255,255,255),(0,351,800,50))
         pygame.display.flip()
 
         # Controle da taxa de frames
