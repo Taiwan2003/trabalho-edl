@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" name="Tiles" tilewidth="32" tileheight="32" tilecount="132" columns="11">
+  <image source="../../../../../Downloads/Final/Final/Tiles.png" width="352" height="384"/>
+ </tileset>
+ <tileset firstgid="133" name="Background_1" tilewidth="32" tileheight="32" tilecount="312" columns="24">
+  <image source="../../../../../Downloads/Final/Final/Background_1.png" width="768" height="416"/>
+ </tileset>
+ <tileset firstgid="445" name="Background_0" tilewidth="32" tileheight="32" tilecount="312" columns="24">
+  <image source="../../../../../Downloads/Final/Final/Background_0.png" width="768" height="416"/>
+ </tileset>
+ <layer id="4" name="fundo" width="25" height="18">
+  <data encoding="base64" compression="zlib">
+   eJztzPefzwUAx/HvfaXS0KBooUlSpKgkpE2FiCK7RaGJlKxoDyqjRaGigaZ1x+Gm28O545w73B23uTbl+Xjc57/Q+/F4Pt6/vSIjQqEoNrCRaDaxmS3EEEsc8SSQyFaSSCaFVNJIJ4NMsogkm23ksJ1c8tjBTvLZRQG7KaSIPexlH8WUUMp+DlBGedCvoJIqqqnhIIeo5Td+5w/+5C/+5h8Oc4R/+Y9QOBSKIEw9jgvX9ev74zmBE2nASZzMKZxKQ07jdM7gTBrRmLM4myY05RzO5TzOD9f1L6AZzWnBhVzExVzCpVxGS1pxOa25gjZcyVW0pR1X055ruDbod6Aj13E9N9CJG+nMTXShK924me7cwq3cxu3cwZ3cRQ96cnfQv4d76UVv+nAffenH/fRnAA/wIAMZxEMMZghDGcZwRjCSh4P+IzzKYzzOKEbzBE8yhrGM4yme5hme5TmeZzwTmMgLTOJFXgr6k3mZKUxlGtOZwSvMZBav8hqv8wZv8hZv8w7v8h6zmcP7fBD0P2Qu85jPAj7iYz7hUz5jIYv4nC9YzBKW8iVf8TXLWM43fBv0v+N7VrCSVfzAj/zEz/zCr6xmDWtZx3oiiWIDG4lmE5vZEvRjiCWOeBJIZCtJJJNCKmmkk0EmWWSzjRy2k0seO9gZ9PPZRQG7KaSIPexlH8WUUMp+DlBGORVUUkU1NRzkELVB//8dezsKwuW4Cg==
+  </data>
+ </layer>
+ <layer id="3" name="sombra" width="25" height="18">
+  <data encoding="base64" compression="zlib">
+   eJztzfe30HMcx/F7C2VHEg07GWmgtMieUclqSEVIIalEKOPeurM7uqPu3vt27+3ue82GUXbILBmhYZQRwqPT9w/ws9P7fB/nc76/PF8hIf+PCyOchSwigkiiiCaGWBYTRzwJJLKEJJJJIZWlLCON9GAjg0yyyCaHXPLIp4BCiiimhFLKKKeCSpZTRTU1rKA22KijngYaaaKZFlp5jud5gRd5iZdZySpWs4ZXeJXXeJ21rAs23uBN3uJt3uFd3mM97/MBH7KBj/iYT/iUz/icjWziCzbzJV8FG1/zDVv4lu/4nq1sYzs7+IEf+Ymf2ckufuFXfuN3dvMHf/JXsLGHv/ln70+ojza05QAO5CDa0Z6DOYRDOYzDOYIj6cBRHE1Hjgnd1+/kPZbOHMfxdKEr3ejOCZzISZzMKZzKafTgdHpyBmdyFmfTK3Rf/xx604e+9ONczuN8+jOACxjIIAYzhKFcyEUM42Iu4VIu4/KgfwVXchVXcw3Xch3DuZ4bGMFIRnEjo7mJm7mFW7mNMYxlHOOD/u1M4A4mMonJ3MldTOFu7uFepnIf05jO/TzAg8zgIWbyMLOC/mzm8AhzeZTHmMfjPMGTzGcBT/E0z/AsYYSzkEVEEEkU0UE/hlgWE0c8CSSyhCSSSSGVpSwjjXQyyCSLbHLIJY/8oF9AIUUUU0IpZZRTQSXLqaKaGlZQSx31NNBIE8200Br0999/v38BXSum6Q==
+  </data>
+ </layer>
+ <layer id="2" name="grades" width="25" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALigR8Q+2OhqQkigTgKC00pgLkVhFOAOBULTSmAuZUa7sUFYG6lhntHAQMDACRwCXM=
+  </data>
+ </layer>
+ <layer id="1" name="plataforma" width="25" height="18">
+  <data encoding="base64" compression="zlib">
+   eJztz8sKwjAQheGioCsFqwuFqoUW6mXnbWfVnTa+//P0L0wgDFN8AHPgIwlJZpIkiYmJifm/DDA0+Myx6Ll7whkXXHHrOTfB1JBhjQ22yMUIY3FHjQeeeMl+pt67hMNKqbDDHgccxQypeOODRmp8Zb9S7y1QSt2wl7/nRxesQ+GZ8gen+li19dzqZ9W1/tBpAZUdE9Y=
+  </data>
+ </layer>
+</map>
